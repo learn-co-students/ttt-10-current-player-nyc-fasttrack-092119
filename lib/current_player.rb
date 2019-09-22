@@ -1,10 +1,8 @@
 def turn_count(board)
   turns_played=0
-  board.each do |position|
-    if (position.upcase == "X" || position.upcase == "O" )
-      turns_played+=1 
-    end
-  end
+  board.each  { |e| turns_played+=1 if e.strip != "" }
+    
+  
   return turns_played
 end
 
